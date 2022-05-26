@@ -9,10 +9,13 @@ Repositorio de funciones Javascript.
 **Descripción**
 
 La función permite remplazar una lista de caracteres que existan dentro de una cadena de texto.
+
 **Parámetros**
+
 - **texto** *(string)* : cadena de texto que será formateada.
 
 **Resultados**
+
 ```javascript
 let miTexto = `
 Test.										
