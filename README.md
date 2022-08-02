@@ -24,3 +24,23 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z {} | {} ~
 `;
 let nuevoTexto = caracteresRaros(miTexto); // resultado sola línea: Test.! " # $ % & ' () * + , - / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z []  _ ´a b c d e f g h i j k l m n o p q r s t u v w x y z {}  {} ~
 ```
+
+#### `recorrerLista(idLista)`
+**Descripción**
+
+La función permite recorrer los elementos de una lista html(`<li><li>`).
+
+**Parámetros**
+
+- **idLista** *(string)* : id del elemento de la lista `<ul>` o `<ol>`.
+
+**Resultados**
+```html
+<ul id="miId">
+	<li id="elItem">Elemento 1</li>
+	<li id="loItem">Elemento 2</li>
+</ul>
+```
+```javascript
+recorrerLista('miId') // resultados: ItemInfo: id = "elItem", x = 36, y = 65; ItemInfo: id = "loItem", x = 36, y = 65
+```
