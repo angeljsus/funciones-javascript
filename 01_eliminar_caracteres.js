@@ -1,7 +1,6 @@
-	const caracteresRaros = (texto) => {
+const caracteresRaros = (texto) => {
 		const chars = [
-			{ char: new RegExp(/\(/, 'g'), htmlCode: '&#40;' },
-			{ char: new RegExp(/\)/, 'g'), htmlCode: '&#41;' },
+			{ char: new RegExp(/\#/, 'g'), htmlCode: '&num;' },
 			{ char: new RegExp(/\!/, 'g'), htmlCode: '&excl;' },
 			{ char: new RegExp(/\"/, 'g'), htmlCode: '&quot;' },
 			{ char: new RegExp(/\$/, 'g'), htmlCode: '&dollar;' },
@@ -11,12 +10,12 @@
 			{ char: new RegExp(/\+/, 'g'), htmlCode: '&plus;' },
 			{ char: new RegExp(/\,/, 'g'), htmlCode: '&comma;' },
 			{ char: new RegExp(/\-/, 'g'), htmlCode: '&#45;' },
-			// { char: new RegExp(/\./, 'g'), htmlCode: '&period;' },
+			{ char: new RegExp(/\./, 'g'), htmlCode: '&period;' },
 			{ char: new RegExp(/\//, 'g'), htmlCode: '&sol;' },
 			{ char: new RegExp(/\:/, 'g'), htmlCode: '&colon;' },
-			// { char: new RegExp(/\</, 'g'), htmlCode: '&lt;' },
-			// { char: new RegExp(/\>/, 'g'), htmlCode: '&gt;' },
+			{ char: new RegExp(/\</, 'g'), htmlCode: '&lt;' },
 			{ char: new RegExp(/\=/, 'g'), htmlCode: '&equals;' },
+			{ char: new RegExp(/\>/, 'g'), htmlCode: '&gt;' },
 			{ char: new RegExp(/\?/, 'g'), htmlCode: '&quest;' },
 			{ char: new RegExp(/\@/, 'g'), htmlCode: '&commat;' },
 			{ char: new RegExp(/\[/, 'g'), htmlCode: '&lsqb;' },
@@ -46,6 +45,8 @@
 			texto = texto.replace(char, htmlCode);
 		});
 
+		texto = texto.replace(/\(/g, '&#40;');
+		texto = texto.replace(/\)/g, '&#41;');
 		texto = texto.replace(/[\u0000-\u0019|\u001A|\u001B|\u001C|\u001D|\u001E|\u001F|\u007F]/g, '');
 		return texto;
 	};
